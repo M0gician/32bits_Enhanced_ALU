@@ -90,6 +90,8 @@ GitHub.sublime-settings
 ### Vivado ###
 /*.cache
 /*.hw
+/*.jou
+/*.log
 
 ### Windows ###
 # Windows thumbnail cache files

@@ -1,4 +1,11 @@
-# EECS/CSE 31L Midterm Project — 32btis Enhanced ALU
+# EECS/CSE 31L Midterm Project — 32bits Enhanced ALU
+
+## Usage
+Download:
+```
+git clone https://github.com/M0gician/32bits_Enhanced_ALU
+```
+Then open the 32bits_Enhanced_ALU.xpr in Vivado :)
 
 ## ALU Description
 | Op-Code | Micro-Operation | Description                     |
