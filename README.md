@@ -16,12 +16,12 @@ Then open the 32bits_Enhanced_ALU.xpr in Vivado :)
 | 0011    | A - 1           | Decrement                       |
 | 0100    | A               | Move                            |
 | 0101    | shl             | 1-bit logical shift left of A   |
-| 0110    | SIMD A + B      | four 8-bits Add                 |
-| 0111    | A & B           | Butwuse AND                     |
-| 1000    | A | B           | Bitwise OR                      |
+| 0110    | SIMD A + B      | Four 8-bits Add                 |
+| 0111    | A & B           | Bitwise AND                     |
+| 1000    | A \| B          | Bitwise OR                      |
 | 1001    | A &oplus; B     | Bitwise XOR                     |
-| 1010    | ¬A (A')         | Compliment                      |
-| 1010    | A + 1           | 2's Compliment                  |
+| 1010    | ¬A (A')         | Complement                      |
+| 1010    | A + 1           | 2's Complement                  |
 
 ## Flags
 * **Carry Flag**: Only in ADD operation is set when you have carry out on Left-most bit (MSB)
