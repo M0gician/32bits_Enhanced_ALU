@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3.1 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2034413 on Fri Oct 20 15:56:25 MDT 2017
+# Start of session at: Sat Oct 28 22:32:37 2017
+# Process ID: 25968
+# Current directory: D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.sim/sim_1/behav/xsim/xsim.dir/ALU_32Bits_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.sim/sim_1/behav/xsim/xsim.dir/ALU_32Bits_behav/webtalk/xsim_webtalk.tcl -notrace
