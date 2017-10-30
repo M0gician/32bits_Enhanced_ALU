@@ -50,7 +50,7 @@ module ALU_32Bits(a, b, Op_Code, out, Cf, Of, Zf, Sf);
                  Op_Code == 4'b0010 ? A + 1                                     :
                  Op_Code == 4'b0011 ? A - 1                                     :
                  Op_Code == 4'b0100 ? A                                         :
-                 Op_Code == 4'b0101 ? {A[30:0], A[31]}                          :
+                 Op_Code == 4'b0101 ? A << 1                                    :
                  Op_Code == 4'b0110 ? {A[31:24] + B[31:24], A[23:16] + B[23:16],
                                        A[15: 8] + B[15: 8], A[ 7: 0] + B[ 7: 0]}: 
                  Op_Code == 4'b0111 ? A && B                                    :
