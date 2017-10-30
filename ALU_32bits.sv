@@ -47,7 +47,7 @@ module ALU_32bits(a, b, Op_Code, out, Cf, Of, Zf, Sf);
     
     logic [31:0] temp1;
     logic [31:0] temp2;
-    logic [32:0] temp3;
+    //logic [32:0] temp3;
     
     assign temp1 = (Op_Code == 4'b0000)? A+B:
                  (Op_Code == 4'b0001)? A+(~B)+1:
@@ -69,7 +69,7 @@ module ALU_32bits(a, b, Op_Code, out, Cf, Of, Zf, Sf);
 
     assign Out = (Op_Code == 4'b0110)? temp2: temp1;
     
-    assign temp3 = (Op_Code == 4'b0000)? A+B:33'bz;
+    //assign temp3 = (Op_Code == 4'b0000)? A+B:33'bz;
     
     assign Zf = (Out == 0)? 1:0;
     assign Sf = (Op_Code == 4'b0000)? Out[31]:
