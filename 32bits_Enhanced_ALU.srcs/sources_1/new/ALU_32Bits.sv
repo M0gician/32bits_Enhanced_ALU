@@ -41,7 +41,7 @@ module ALU_32Bits(a, b, Op_Code, out, Cf, Of, Zf, Sf);
 
     assign A = {a, 26'b0};              //length extension of a
     assign B = {b, 26'b0};              //length extension of b
-    assign out = Out[31:26];
+    assign out = Out[31:26];4
 // -----------------------------------------------------------
 
     logic [32:0] temp;
@@ -59,14 +59,9 @@ module ALU_32Bits(a, b, Op_Code, out, Cf, Of, Zf, Sf);
                  Op_Code == 4'b1010 ? ~A                                        :
                  Op_Code == 4'b1011 ? ~A + 1                                    :'z;
 
-    assign temp = Op_Code == 4'b0000 ? A + B                                    :
-                  Op_Code == 4'b0001 ? A + ~B + 1                               : 
-                  Op_Code == 4'b0010 ? A + 1                                    :
-                  Op_Code == 4'b1011 ? ~A + 1                                   : 0;
-                  
-    assign Cf = Op_Code == 4'b0000 ? temp[32]                                   : 
-                Op_Code == 4'b0010 ? temp[32]                                   :
-                Op_Code == 4'b1011 ? temp[32]                                   : 0;
+    assign Cf = Op_Code == 4'b0000 ? (A[31] && ~ B[31] && ~Out[31]) || (~ A[31] && B[31] && ~ Out[31]) || (A[31] && B[31]  : 
+                Op_Code == 4'b0010 ? (A[31] && ~ B[31] && ~Out[31]) || (~ A[31] && B[31] && ~ Out[31]) || (A[31] && B[31]  :
+                Op_Code == 4'b1011 ? (A[31] && ~ B[31] && ~Out[31]) || (~ A[31] && B[31] && ~ Out[31]) || (A[31] && B[31]  : 0;
 
     assign Of = Op_Code == 4'b0000 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) :
                 Op_Code == 4'b0001 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) :

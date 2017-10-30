@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3.1 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2034413 on Fri Oct 20 15:56:25 MDT 2017
+# Start of session at: Sun Oct 29 03:35:26 2017
+# Process ID: 6140
+# Current directory: D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.runs/synth_1
+# Command line: vivado.exe -log ALU_32Bits.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU_32Bits.tcl
+# Log file: D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.runs/synth_1/ALU_32Bits.vds
+# Journal file: D:/Xilinx/32btis_Enhanced_ALU/32bits_Enhanced_ALU.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ALU_32Bits.tcl -notrace
