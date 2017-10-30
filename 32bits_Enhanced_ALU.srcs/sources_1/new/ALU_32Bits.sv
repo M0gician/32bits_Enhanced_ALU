@@ -41,7 +41,7 @@ module ALU_32Bits(a, b, Op_Code, out, Cf, Of, Zf, Sf);
 
     assign A = {a, 26'b0};              //length extension of a
     assign B = {b, 26'b0};              //length extension of b
-    assign out = Out[31:26];4
+    assign out = Out[31:26];
 // -----------------------------------------------------------
 
     logic [32:0] temp;
@@ -59,21 +59,13 @@ module ALU_32Bits(a, b, Op_Code, out, Cf, Of, Zf, Sf);
                  Op_Code == 4'b1010 ? ~A                                        :
                  Op_Code == 4'b1011 ? ~A + 1                                    :'z;
 
-    assign Cf = Op_Code == 4'b0000 ? (A[31] && ~ B[31] && ~Out[31]) || (~ A[31] && B[31] && ~ Out[31]) || (A[31] && B[31]  : 
-                Op_Code == 4'b0010 ? (A[31] && ~ B[31] && ~Out[31]) || (~ A[31] && B[31] && ~ Out[31]) || (A[31] && B[31]  :
-                Op_Code == 4'b1011 ? (A[31] && ~ B[31] && ~Out[31]) || (~ A[31] && B[31] && ~ Out[31]) || (A[31] && B[31]  : 0;
+    assign Cf = Op_Code == 4'b0000 ? (A[31] && ~ B[31] && ~Out[31]) || (~ A[31] && B[31] && ~ Out[31]) || (A[31] && B[31]): 0;
 
     assign Of = Op_Code == 4'b0000 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) :
-                Op_Code == 4'b0001 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) :
-                Op_Code == 4'b0010 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) :
-                Op_Code == 4'b0011 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) :
-                Op_Code == 4'b1011 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) : 0;
+                Op_Code == 4'b0001 ? (~A[31] && ~ B[31] &&  Out[31] ) || (A[31] && B[31] && ~ Out[31]) : 0;
 
     assign Sf = Op_Code == 4'b0000 ? Out[31] :
-                Op_Code == 4'b0001 ? Out[31] :
-                Op_Code == 4'b0010 ? Out[31] :
-                Op_Code == 4'b0011 ? Out[31] :
-                Op_Code == 4'b1011 ? Out[31] : 0;
+                Op_Code == 4'b0001 ? Out[31] : 0;
                 
     assign Zf = Out == 0? 1 : 0;
 endmodule
